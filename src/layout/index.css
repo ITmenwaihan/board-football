@@ -1,0 +1,21 @@
+@import 'src/index.css';
+
+.header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  width: calc(100vw - 200px);
+  height: var(--headerHight);
+  float: right;
+  background-color: var(--headerColor);
+}
+
+.side {
+  display: flex;
+  height: 100vh
+}
+
+.side .sideContent {
+  flex: 0 0 200px;
+  background-color: var(--sideColor);
+}
