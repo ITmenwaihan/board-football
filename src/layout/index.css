@@ -19,3 +19,9 @@
   flex: 0 0 200px;
   background-color: var(--sideColor);
 }
+
+.menu {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
