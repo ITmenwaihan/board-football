@@ -1,14 +1,26 @@
 import { NavLink } from 'react-router-dom';
-import { routers } from '../router/router.ts';
 import './index.css'
 
 function Menu () {
+
+
+  const menuList = [
+    {
+      name: '主页',
+      path: '/'
+    },
+    {
+      name: '大文件上传',
+      path: './bigFile'
+    }
+  ]
+
   return (
     <>
-      {routers.map((item, index) => {
+      {menuList.map((item, index) => {
         return (
           <div key={index} className='menu'>
-            <NavLink to={item.path} >{item.meta?.title}</NavLink>
+            <NavLink to={item.path} >{item.name}</NavLink>
           </div>
         )
       })}

@@ -8,10 +8,12 @@ body {
 
 html.dark {
   --headerColor: #1B1B1F;
-  --sideColor: #161618
+  --sideColor: #161618;
+  --contentBGColor: #F6F6F6
 }
 
 html.light {
   --headerColor: #FFFFFF;
-  --sideColor: #F6F6F7
+  --sideColor: #F6F6F7;
+  --contentBGColor: #F6F6F6
 }

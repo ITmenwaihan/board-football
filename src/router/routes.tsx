@@ -11,10 +11,15 @@ function _renderRouter (routes: Array<routerType>) {
     return routes.map((item) => {
       let res: any = {...item};
       if (item?.component) {
-        const Component = React.lazy(item.component);
-        res.element = <React.Suspense fallback={<h2>Loading.......</h2>}>
-          <Component></Component>
-        </React.Suspense>
+        if (item?.path) {
+          const Component = React.lazy(item.component);
+          res.element = <React.Suspense fallback={<h2>Loading.......</h2>}>
+            <Component></Component>
+          </React.Suspense>
+        }else {
+          res.element = item.component
+        }
+        
       }
       if (item?.children) {
         res.children = _renderRouter(item.children)

@@ -1,4 +1,4 @@
-@import 'src/index.css';
+/* @import 'src/index.css'; */
 
 .header {
   display: flex;
@@ -8,6 +8,18 @@
   height: var(--headerHight);
   float: right;
   background-color: var(--headerColor);
+}
+
+.mainContent {
+  position: absolute;
+  top: var(--headerHight);
+  left: 200px;
+  min-width: -webkit-fill-available;
+  min-height: -webkit-fill-available;
+  margin: 12px;
+  border-radius: 8px;
+  background-color: var(--contentBGColor);
+  padding: 8px;
 }
 
 .side {

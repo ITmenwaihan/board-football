@@ -1,7 +1,5 @@
-
-
 export interface routerType {
-  path: string,
+  path?: string,
   component: any,
   meta?: {
     title?: string,
@@ -10,15 +8,15 @@ export interface routerType {
   children?: Array<routerType>
 }
 
-
 const routers: Array<routerType> = [
   {
     path: '/',
-    component: () => import('../App'),
-    meta: {
-      title: '主页'
-    },
+    component: () => import('../layout/layout'),
     children: [
+      {
+        path: '/',
+        component: () => import('../App'),
+      },
       {
         path: '/dataBoard',
         component: () => import('../pages/dataBoard/dataBoard') ,
@@ -28,9 +26,16 @@ const routers: Array<routerType> = [
       },
       {
         path: '/dropList',
-        component: import('../pages/dropList/dropList') ,
+        component: () => import('../pages/dropList/dropList') ,
         meta: {
           title: '拖拽列表'
+        }
+      },
+      {
+        path: '/bigFile',
+        component: () => import('../pages/bigFile/bigFile') ,
+        meta: {
+          title: '大文件上传'
         }
       },
     ]

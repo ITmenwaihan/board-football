@@ -1,0 +1,33 @@
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.content .upload-area {
+  position: relative;
+  width: 70%;
+  height: 200px;
+  border: 1px dashed gray;
+  border-radius: 8px;
+}
+
+.content .upload-area span {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content .upload-area:hover {
+  border-color: rgb(63, 63, 212);
+}
+
+.content .upload-area input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
