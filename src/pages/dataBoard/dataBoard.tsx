@@ -1,9 +1,13 @@
 
 
+import BaseLineChart from  '@/components/cusEcharts/baseLineChart'
+
 function DataBoard () {
 
   return (
-    <div>{'这是一个看板页面'}</div>
+    <div>
+      <BaseLineChart></BaseLineChart>
+    </div>
   )
 
 }

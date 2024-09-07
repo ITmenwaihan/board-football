@@ -61,6 +61,30 @@
   }
 ```
 
+## 使用redux-toolkit来管理状态
+创建store文件 
+```js
+import { configureStore } from '@reduxjs/toolkit';
+import  themeData  from './theme';
+
+export default configureStore({
+  reducer: {
+    theme: themeData
+  }
+})
+```
+然后挂载到app上 使用provide注入store
+```js
+import { Provider } from'react-redux';
+import store from './store';
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+```
+
+
        
 
 

@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import {useDispatch} from "react-redux";
+import {getTheme} from '@/store/theme';
 
 // 主题切换
+
+
 function Theme () {
 
+  const dispatch = useDispatch();
 
   const themeList = [
     {
@@ -17,6 +22,7 @@ function Theme () {
   ];
 
   const Listener = (e: { matches: boolean; }) => {
+    dispatch(getTheme());
     const tmpClassName = document.documentElement.className;
     const tmpSt = localStorage.getItem('theme');
     if (tmpSt === 'system') {
@@ -36,7 +42,8 @@ function Theme () {
     }
   }, [])
 
-  useEffect(() => {    
+  useEffect(() => {   
+    dispatch(getTheme()); 
     localStorage.getItem('theme') ?? localStorage.setItem('theme', 'system');
     const stTheme = localStorage.getItem('theme');
     if (stTheme) {
@@ -70,7 +77,8 @@ function Theme () {
     }else {
       document.documentElement.classList.replace(tmpClassName,tmpValue);
     }
-    localStorage.setItem('theme', tmpValue)
+    localStorage.setItem('theme', tmpValue);
+    dispatch(getTheme());
   }
 
   return (

@@ -1,6 +1,6 @@
 // layout 组件
 import './index.css';
-import Theme from '../components/theme/theme';
+import Theme from '@/components/theme/theme.tsx';
 import Menu from './meun';
 import { Outlet } from 'react-router-dom';
 
