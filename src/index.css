@@ -9,11 +9,15 @@ body {
 html.dark {
   --headerColor: #1B1B1F;
   --sideColor: #161618;
-  --contentBGColor: #F6F6F6
+  --contentBGColor: #F6F6F6;
+  --menuTextColor: #FFFFFF;
+  --menuBgColor: #2A3744
 }
 
 html.light {
   --headerColor: #FFFFFF;
   --sideColor: #F6F6F7;
-  --contentBGColor: #F6F6F6
+  --contentBGColor: #F6F6F6;
+  --menuTextColor: #000000;
+  --menuBgColor: #E6F7FF
 }

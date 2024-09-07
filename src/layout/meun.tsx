@@ -12,6 +12,10 @@ function Menu () {
     {
       name: '大文件上传',
       path: './bigFile'
+    },
+    {
+      name: '数据看板',
+      path: './dataBoard'
     }
   ]
 
