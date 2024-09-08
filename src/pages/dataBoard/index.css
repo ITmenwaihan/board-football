@@ -1,0 +1,4 @@
+.chartContent {
+  display: flex;
+  flex-wrap: wrap;
+}
