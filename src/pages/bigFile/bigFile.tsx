@@ -2,27 +2,27 @@
 import './index.css';
 
 function BigFile () {
-  const renderPreview = (value: string) => {
-    const img = document.createElement('img');
-    img.height = 120;
-    img.width = 150;
-    img.src = value;
-    const preview = document.getElementById('preview');
-    preview?.appendChild(img)
-  }
+  // const renderPreview = (value: string) => {
+  //   const img = document.createElement('img');
+  //   img.height = 120;
+  //   img.width = 150;
+  //   img.src = value;
+  //   const preview = document.getElementById('preview');
+  //   preview?.appendChild(img)
+  // }
 
-  const toBase64 = (file: any) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = (e) => {
-        resolve(e.target?.result)
-      }
-      reader.onerror = () => {
-        reject(new Error('toBase64 error'))
-      }
-    })
-  }
+  // const toBase64 = (file: any) => {
+  //   return new Promise((resolve, reject) => {
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(file);
+  //     reader.onload = (e) => {
+  //       resolve(e.target?.result)
+  //     }
+  //     reader.onerror = () => {
+  //       reject(new Error('toBase64 error'))
+  //     }
+  //   })
+  // }
 
   
 

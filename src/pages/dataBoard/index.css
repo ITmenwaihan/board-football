@@ -2,3 +2,14 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.downloadIcon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.downloadIcon img {
+  width: 100%;
+  height: 100%;
+}

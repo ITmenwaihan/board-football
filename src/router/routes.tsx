@@ -1,4 +1,4 @@
-import { RouteObject, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import {routers, routerType} from './router';
 import React from 'react'
 
